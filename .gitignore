@@ -67,3 +67,7 @@ services/tts/cache/
 .env
 .env.local
 .env.*.local
+
+# App
+apps/web/public/generated/*
+!apps/web/public/generated/.gitkeep
