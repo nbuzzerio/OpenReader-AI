@@ -34,3 +34,36 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# TTS local files
+services/tts/voices/*
+!services/tts/voices/.gitkeep
+services/tts/outputs/*
+!services/tts/outputs/.gitkeep
+services/tts/models/
+services/tts/cache/
+
+# Audio generated locally
+*.wav
+*.mp3
+*.flac
+
+# Environment
+.env
+.env.local
+.env.*.local
