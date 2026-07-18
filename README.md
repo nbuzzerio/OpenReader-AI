@@ -1,27 +1,46 @@
-# Local AI Lab
+# OpenReader AI
 
-A collection of privacy-first AI applications exploring practical uses of modern open-source speech and language models.
+> A privacy-first local AI text-to-speech reader that converts long-form text into natural speech while keeping every document on your own machine.
 
-The first project in the lab is a **fully local Text-to-Speech Reader** built with **XTTS v2**, **FastAPI**, **Next.js**, and **TypeScript**. It generates natural-sounding speech from arbitrary text using cloned voices without relying on cloud AI services.
+![OpenReader AI](docs/screenshot.png)
+
+OpenReader AI is a full-stack application that combines a modern React frontend with a local AI backend to provide an offline alternative to cloud-based text-to-speech services. It was designed for listening to technical documentation, research papers, books, and long articles while walking, driving, or exercising.
+
+Unlike many commercial solutions, OpenReader AI never uploads your documents to external servers. All text processing and speech generation happen locally, giving users complete control over their data.
 
 ---
 
 ## Features
 
-- 🧠 Fully local AI inference (XTTS v2)
-- 🎤 Voice cloning using reference audio samples
-- ⚡ Persistent GPU model loaded once at startup
-- 📄 Long-document support with automatic text chunking
-- 📊 Live generation progress and ETA
-- ⏯ Playback controls
-  - Seek
-  - Rewind / Fast-forward
-  - Playback speed
+- 🎤 Fully local AI text-to-speech generation
+- 🔒 Privacy-first architecture (no cloud APIs)
+- 📄 Long-document support with automatic chunking
 - 📚 Read-along mode with synchronized sentence highlighting
-- 🎙 Multiple narrator selection
+- ⏯ Rich playback controls
+  - Skip backward / forward
+  - Playback speed adjustment
+  - Audio scrubbing
 - 🗂 Saved recordings library
-- ⏳ Queued generation for safe processing of multiple requests
-- 🔒 Offline-first architecture (no cloud APIs)
+- 🎙 Multiple narrator support
+- 📊 Live generation progress and ETA
+- ⚡ Persistent AI model loaded once at startup
+- 🚀 GPU acceleration with CUDA
+
+---
+
+## Screenshot
+
+![OpenReader AI Read Along](docs/read-along.png)
+
+---
+
+## Why I Built It
+
+I frequently listen to technical documentation, AI course material, and long-form articles while walking.
+
+Most text-to-speech platforms either require uploading documents to cloud services or charge recurring subscription fees.
+
+OpenReader AI was built to provide a fast, offline alternative that gives users complete ownership of their documents while still offering a polished reading experience.
 
 ---
 
@@ -29,8 +48,8 @@ The first project in the lab is a **fully local Text-to-Speech Reader** built wi
 
 ### Frontend
 
-- Next.js (App Router)
 - React
+- Next.js (App Router)
 - TypeScript
 - Tailwind CSS
 
@@ -46,7 +65,7 @@ The first project in the lab is a **fully local Text-to-Speech Reader** built wi
 
 ### Infrastructure
 
-- CUDA GPU acceleration
+- NVIDIA CUDA
 
 ---
 
@@ -82,37 +101,26 @@ The first project in the lab is a **fully local Text-to-Speech Reader** built wi
 
 ---
 
-## Why I Built This
-
-I frequently listen to technical documentation, AI course notes, and long-form reading while walking or driving.
-
-Most commercial text-to-speech solutions require uploading documents to cloud services or charge recurring subscription fees.
-
-This project explores how modern open-source AI models can deliver a comparable experience entirely offline while remaining extensible for future AI experiments.
-
----
-
 ## Technical Highlights
 
-- Asynchronous job processing for long-running AI inference
-- Persistent GPU model loading to minimize generation latency
-- Automatic document chunking for long-form content
-- Sentence-level timing metadata for synchronized read-along playback
-- Offline-first architecture with no external AI APIs
+- Full-stack React + FastAPI application
+- Asynchronous job queue for long-running AI inference
+- Automatic chunking of long documents
+- Sentence-level timing metadata for synchronized highlighting
+- Persistent GPU model loading to minimize latency
+- Local-first architecture with no external AI services
 
 ---
 
-## Future Ideas
+## Future Enhancements
 
-- Chapter support
-- Audiobook mode
 - MP3 export
-- Transcript export
-- Mobile-friendly interface
-- Improved synchronization accuracy
-- Voice management UI
-- Bookmarking
-- Searchable transcripts
+- Audiobook playlists
+- Chapter navigation
+- Bookmarks
+- Search within transcripts
+- Improved timing precision
+- Additional voice management tools
 
 ---
 

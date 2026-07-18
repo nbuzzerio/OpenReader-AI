@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const DEFAULT_TEXT =
-  "Hello Nick. This is your local AI lab reading pasted text with a cloned voice.";
+  "Hello there. This is your OpenReader AI. Paste text here with a cloned voice to generate TTS.";
 
 const FONT_SIZE_CLASSES = {
   base: "text-base",
@@ -394,7 +394,7 @@ export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-6 p-8">
       <header>
-        <h1 className="text-3xl font-bold">Local AI Lab</h1>
+        <h1 className="text-3xl font-bold">OpenReader AI</h1>
         <p className="mt-2 text-sm opacity-70">
           Paste text, generate speech locally, and play it back.
         </p>
